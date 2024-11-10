@@ -113,6 +113,8 @@ public class Person {
     public void addParents(Person father, Person mother, Person child) {
         child.setMother(mother);
         child.setFather(father);
+        mother.addChild(mother, child);
+        father.addChild(father, child);
     }
 
     public void addChild(Person parent, Person child) {
